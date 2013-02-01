@@ -25,7 +25,7 @@ void example()
   const unsigned char* x = buf1 + offset;
   const unsigned char* y = buf2 + offset;
 
-  int a = (bin2val_cast(x));
+  int a = bin2val_cast(x);
   assert(a == n);
   float b = bin2val_cast(y);
   assert(b == m);
