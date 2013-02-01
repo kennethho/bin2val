@@ -19,11 +19,11 @@ void example()
   const size_t offset = 1;
   unsigned char buf1[sizeof(n) + offset];
   unsigned char buf2[sizeof(m) + offset];
+  unsigned char* x = buf1 + offset;
+  unsigned char* y = buf2 + offset;
 
-  memcpy(buf1 + offset, &n, sizeof(n));
-  memcpy(buf2 + offset, &m, sizeof(m));
-  const unsigned char* x = buf1 + offset;
-  const unsigned char* y = buf2 + offset;
+  memcpy(x, &n, sizeof(n));
+  memcpy(y, &m, sizeof(m));
 
   int a = bin2val_cast(x);
   assert(a == n);
